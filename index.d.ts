@@ -24,6 +24,7 @@
 /// <reference path="mp.game.system.d.ts" />
 /// <reference path="mp.game.time.d.ts" />
 /// <reference path="mp.game.unk.d.ts" />
+/// <reference path="mp.game.vehicle.d.ts" />
 /// <reference path="mp.game.water.d.ts" />
 /// <reference path="mp.game.weapon.d.ts" />
 /// <reference path="mp.game.worldprobe.d.ts" />
