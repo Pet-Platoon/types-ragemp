@@ -28,8 +28,7 @@ declare module mp.game {
         static doesWeaponTakeWeaponComponent(weaponHash: number, componentHash: number): boolean;
         static getWeaponTintCount(weaponHash: string): number;
         static getWeaponTintCount(weaponHash: number): number;
-        static hasVehicleProjectileAttached(driver: mp.game.ped, vehicle: object, weapon: string, p3: any): boolean; // TODO: Change vehicle type to VehicleHandle;
-        static hasVehicleProjectileAttached(driver: mp.game.ped, vehicle: object, weapon: number, p3: any): boolean; // TODO: Change vehicle type to VehicleHandle;
+        static hasVehicleGotProjectileAttached(driver: mp.game.ped, vehicle: mp.game.vehicle, weapon: number | string, p3: any): boolean;
         static hasWeaponGotWeaponComponent(weapon: mp.game.object, addonHash: string): boolean;
         static hasWeaponGotWeaponComponent(weapon: mp.game.object, addonHash: number): boolean;
         static isWeaponValid(weaponHash: string): boolean;

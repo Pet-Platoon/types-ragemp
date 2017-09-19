@@ -3,7 +3,7 @@ declare module mp.game {
     class audio {
         startAudioScene(sceneName: string): boolean;
         isAmbientZoneEnabled(ambientZone: string): boolean;
-        getVehicleDefaultHorn(vehicle: object): boolean; // TODO: Make overload for VehicleHandle
+        getVehicleDefaultHorn(vehicle: mp.game.vehicle): string | number;
         prepareSynchronizedAudioEventForScene(p0: object, p1: object): boolean;
         startAlarm(alarmName: string, p2: boolean);
         setMobileRadioEnabledDuringGameplay(toggle: boolean);
