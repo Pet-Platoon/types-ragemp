@@ -1,4 +1,5 @@
 /// <reference path="index.d.ts" />
+
 declare module mp.game {
     class audio {
         startAudioScene(sceneName: string): boolean;
@@ -22,13 +23,13 @@ declare module mp.game {
         requestScriptAudioBank(p0: string, p1: boolean): boolean;
         setVariableOnStream(p0: string, p1: number);
         freezeRadioStation(radioStation: string);
-        playAmbientSpeechWithVoice(p0: object, speechName: string, voiceName: string, speechParam: string, p4: boolean);
-        playAmbientSpeechWithVoice(p0: mp.game.ped, speechName: string, voiceName: string, speechParam: string, p4: boolean);
+        playAmbientSpeechWithVoice(p0: mp.game.ped | object, speechName: string, voiceName: string, speechParam: string, p4: boolean);
         releaseSoundId(soundId: number);
         setAggressiveHorns(toggle: boolean);
         setStaticEmitterEnabled(emitterName: string, toggle: boolean);
         preloadScriptConversation(p0: boolean, p1: boolean, p2: boolean, p3: boolean);
         setCutsceneAudioOverride(p0: string);
+        setGpsActive(active: boolean);
         loadStreamWithStartOffset(streamName: string, startOffset: number, soundSet: string): boolean;
         cancelMusicEvent(eventName: string): boolean;
         preloadScriptPhoneConversation(p0: boolean, p1: boolean);
@@ -46,11 +47,9 @@ declare module mp.game {
         findRadioStationIndex(station: number): number;
         playSoundFromCoord(soundId: number, audioName: string, x: number, y: number, z: number, audioRef: string, p6: boolean, p7: object, p8: boolean);
         hintAmbientAudioBank(p0: object, p1: object);
-        isAmbientSpeechPlaying(p0: object): boolean;
-        isAmbientSpeechPlaying(p0: mp.game.ped): boolean;
+        isAmbientSpeechPlaying(p0: mp.game.ped | object): boolean;
         stopSynchronizedAudioEvent(p0: object): boolean;
-        getSynchronizedAudioEventPositionThisFrame(p0: string, p1: object);
-        getSynchronizedAudioEventPositionThisFrame(p0: string, p1: mp.game.entity);
+        getSynchronizedAudioEventPositionThisFrame(p0: string, p1: mp.game.entity | object);
         addPedToConversation(p0: object, p1: object, p2: string);
         setAmbientZoneListState(p0: object, p1: boolean, p2: boolean);
         prepareAlarm(alarmName: string): boolean;
@@ -66,8 +65,7 @@ declare module mp.game {
         setRadioTrack(radioStation: string, radioTrack: string);
         isAudioSceneActive(scene: string): boolean;
         setMicrophonePosition(p0: boolean, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, x3: number, y3: number, z3: number);
-        stopCurrentPlayerAmbientSpeech(p0: object);
-        stopCurrentPlayerAmbientSpeech(p0: mp.game.ped);
+        stopCurrentPlayerAmbientSpeech(p0: mp.game.ped | object);
         setAudioFlag(flagName: string, toggle: boolean);
         playPain(painId: number, p1: number, p2: number);
         getPlayerHeadsetSoundAlternate(p0: string, p1: number);
@@ -84,20 +82,16 @@ declare module mp.game {
         stopScriptedConversation(p0: boolean);
         stopAudioScene(scene: string);
         playPoliceReport(name: string, p1: number);
-        playSoundFromEntity(soundId: number, audioName: string, entity: object, audioRef: string, p4: boolean, p5: object);
-        playSoundFromEntity(soundId: number, audioName: string, entity: mp.game.entity, audioRef: string, p4: boolean, p5: object);
-        setPlayerAngry(playerPed: object, disabled: boolean);
-        setPlayerAngry(playerPed: mp.game.ped, disabled: boolean);
-        playStreamFromObject(object: object);
-        playStreamFromObject(object: Object);
+        playSoundFromEntity(soundId: number, audioName: string, entity: mp.game.entity | object, audioRef: string, p4: boolean, p5: object);
+        setPlayerAngry(playerPed: mp.game.ped | object, disabled: boolean);
+        playStreamFromObject(object: mp.game.object | object);
         playAmbientSpeechAtCoords(p0: string, p1: string, p2: number, p3: number, p4: number, p5: string);
         setAudioSceneVariable(p0: object, p1: object, p2: number);
         overrideUnderwaterStream(p0: object, p1: boolean);
         setAmbientZoneListStatePersistent(ambientZone: string, p1: boolean, p2: boolean);
         resetPedAudioFlags(p0: object);
         setFrontendRadioActive(active: boolean);
-        playPedRingtone(ringtoneName: string, ped: object, p2: boolean);
-        playPedRingtone(ringtoneName: string, ped: mp.game.ped, p2: boolean);
+        playPedRingtone(ringtoneName: string, ped: mp.game.ped | object, p2: boolean);
         hintScriptAudioBank(p0: object, p1: object);
         unfreezeRadioStation(radioStation: string);
         hasSoundFinished(soundId: number): boolean;

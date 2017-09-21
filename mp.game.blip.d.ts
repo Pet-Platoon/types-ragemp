@@ -10,15 +10,13 @@ declare module mp.game {
         static getFirstInfoId(blip: mp.game.blip): mp.game.blip;
         static getInfoIdDisplay(blip: mp.game.blip): number;
         static getSprite(blip: mp.game.blip): number;
-        static setCategory(blip: mp.game.blip, index: number);
-        static setCategory(blip: mp.game.blip, index: mp.game.blip.category);
+        static setCategory(blip: mp.game.blip, index: mp.game.blip.category | number);
         static setAsMissionCreator(blip: mp.game.blip, toggle: boolean);
         static isMissionCreator(blip: mp.game.blip): boolean;
         static setFade(blip: mp.game.blip, opacity: number, duration: number);
         static setFlashesAlternate(blip: mp.game.blip, toggle: boolean);
         static setAlpha(blip: mp.game.blip, alpha: number);
-        static getInfoIdEntityIndex(blip: mp.game.blip): mp.game.entity;
-        static getInfoIdEntityIndex(blip: mp.game.blip): object;
+        static getInfoIdEntityIndex(blip: mp.game.blip): mp.game.entity | object;
         static setRoute(blip: mp.game.blip, enabled: boolean);
         static hideNumberOn(blip: mp.game.blip);
         static getCoords(blip: mp.game.blip): mp.Vector3;
