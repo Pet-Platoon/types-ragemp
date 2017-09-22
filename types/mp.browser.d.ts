@@ -2,10 +2,10 @@
 
 declare module mp {
     class browser {
+        static 'new'(url: string);
+
         url: string;
         active: boolean;
-
-        static "new"(url: string);
 
         reload(ignoreCache: boolean);
         execute(executedCode: string);

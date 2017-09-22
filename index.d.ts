@@ -40,4 +40,5 @@
 /// <reference path="types/mp.game.worldprobe.d.ts" />
 /// <reference path="types/mp.game.zone.d.ts" />
 /// <reference path="types/mp.keys.d.ts" />
+/// <reference path="types/mp.Quaternion.d.ts" />
 /// <reference path="types/mp.Vector3.d.ts" />

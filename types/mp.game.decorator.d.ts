@@ -2,10 +2,8 @@
 
 declare module mp.game {
     class decorator {
-        static decorIsRegisteredAsType(propertyName: string, type: mp.game.decorator.decorType): boolean;
-        static decorIsRegisteredAsType(propertyName: string, type: number): boolean;
-        static decorRegister(propertyName: string, type: mp.game.decorator.decorType);
-        static decorRegister(propertyName: string, type: number);
+        static decorIsRegisteredAsType(propertyName: string, type: mp.game.decorator.decorType | number): boolean;
+        static decorRegister(propertyName: string, type: mp.game.decorator.decorType | number);
     }
 }
 

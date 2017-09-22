@@ -6,8 +6,7 @@ declare module mp.game {
         static getPedInsideExplosionArea(explosionType: number, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number): mp.game.entity;
         static isExplosionInArea(explosionType: number, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
         static getClosestFirePos(outPosition: mp.Vector3, x: number, y: number, z: number): mp.Vector3;
-        static addSpecfxExplosion(x: number, y: number, z: number, explosionType: number, explosionFx: string, damageScale: number, isAudible: boolean, isInvisible: boolean, cameraShake: number);
-        static addSpecfxExplosion(x: number, y: number, z: number, explosionType: number, explosionFx: number, damageScale: number, isAudible: boolean, isInvisible: boolean, cameraShake: number);
+        static addSpecfxExplosion(x: number, y: number, z: number, explosionType: number, explosionFx: string | number, damageScale: number, isAudible: boolean, isInvisible: boolean, cameraShake: number);
         static getNumberOfFiresInRange(x: number, y: number, z: number, radius: number): number;
         static startScriptFire(x: number, y: number, z: number, maxChildren: number, isGasFire: boolean): number;
         static removeScriptFire(fireHandle: number);

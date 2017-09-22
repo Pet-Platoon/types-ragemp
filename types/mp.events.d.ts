@@ -3,8 +3,7 @@
 declare module mp {
     class events {
         static add(events: object);
-        static add(eventName: string, func: Function);
-        static add(eventName: mp.events.eventName, func: Function);
+        static add(eventName: mp.events.eventName | string, func: Function);
         static call(eventName: string, ...optionalArguments: any[]);
         static addCommand(commandName: string, handlerFunction: Function);
         static callRemote(eventName: string, ...optionalArguments: any[]);

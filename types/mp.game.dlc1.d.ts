@@ -8,27 +8,19 @@ declare module mp.game {
         static getDlcVehicleData(dlcVehicleIndex: number, outData: object): boolean;
         static getNumDlcWeaponComponents(dlcWeaponIndex: number): number;
         static getDlcVehicleFlags(p0: number): number;
-        static getForcedComponent(componentHash: string, componentId: number, p2: object, p3: object, p4: object);
-        static getForcedComponent(componentHash: number, componentId: number, p2: object, p3: object, p4: object);
-        static getDlcWeaponComponentData(p0: object, p1: object, componentDataPtr: mp.game.dlc1.dlcComponentData): boolean;
-        static getDlcWeaponComponentData(p0: object, p1: object, componentDataPtr: object): boolean;
-        static getShopPedQueryOutput(p0: object, outfit: mp.game.dlc1.outfit);
-        static getShopPedQueryOutput(p0: object, outfit: object);
-        static getVariantComponent(componentHash: string, componentId: number, p2: object, p3: object, p4: object);
-        static getVariantComponent(componentHash: number, componentId: number, p2: object, p3: object, p4: object);
+        static getForcedComponent(componentHash: string | number, componentId: number, p2: object, p3: object, p4: object);
+        static getDlcWeaponComponentData(p0: object, p1: object, componentDataPtr: mp.game.dlc1.dlcComponentData | object): boolean;
+        static getShopPedQueryOutput(p0: object, outfit: mp.game.dlc1.outfit | object);
+        static getVariantComponent(componentHash: string | number, componentId: number, p2: object, p3: object, p4: object);
         static getShopPedComponent(p0: object, p1: object);
-        static getDlcWeaponData(dlcWeaponIndex: number, outData: mp.game.dlc1.dlcWeaponData): boolean;
-        static getDlcWeaponData(dlcWeaponIndex: number, outData: object): boolean;
-        static getNumPropsFromOutfit(p0: mp.game.dlc1.characterType, p1: number, p2: number, p3: boolean, p4: number, componentId: number): number;
-        static getNumPropsFromOutfit(p0: number, p1: number, p2: number, p3: boolean, p4: number, componentId: number): number;
+        static getDlcWeaponData(dlcWeaponIndex: number, outData: mp.game.dlc1.dlcWeaponData | object): boolean;
+        static getNumPropsFromOutfit(p0: mp.game.dlc1.characterType | number, p1: number, p2: number, p3: boolean, p4: number, componentId: number): number;
         static getShopPedOutfit(p0: object, p1: object);
-        static getNumForcedComponents(componentHash: string): number;
-        static getNumForcedComponents(componentHash: number): number;
+        static getNumForcedComponents(componentHash: string | number): number;
         static isDlcDataEmpty(dlcData: number): boolean;
         static getShopPedQueryProp(p0: object, p1: object);
         static initShopPedProp(outProp: number): number;
-        static getDlcVehicleModel(dlcVehicleIndex: number): string;
-        static getDlcVehicleModel(dlcVehicleIndex: number): number;
+        static getDlcVehicleModel(dlcVehicleIndex: number): string | number;
     }
 }
 
