@@ -1,7 +1,7 @@
 /// <reference path="../index.d.ts" />
 
 declare module mp.game {
-    class vehicle {
+    class vehicle extends mp.game.entity {
         static getRandomVehicleModelInMemory(p0: boolean, modelHash: number, p2: number):mp.game.vehicle.randomVehicleModel;
         static hasPreloadModsFinished(p0: object): boolean;
         static getTotalDurationOfVehicleRecording(p0: object, p1: object): object;

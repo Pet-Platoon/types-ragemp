@@ -145,9 +145,11 @@ declare module mp.game.graphics {
         x: number;
         y: number;
     }
+
     class Size extends Point {
 
     }
+
     enum checkpointTypes {
         cylinder1Arrow = 0,
         cylinder2Arrow = 1,
@@ -198,6 +200,7 @@ declare module mp.game.graphics {
         cylinderEmpty2 = 46,
         cylinderEmpty3 = 47
     }
+
     enum reservedSets {
         number0 = 0,
         number1 = 1,
@@ -390,6 +393,7 @@ declare module mp.game.graphics {
         sphere8 = 188,
         sphere9 = 189
     }
+
     enum decalTypes {
         splatters_blood = 1010,
         splatters_blood_dir = 1015,
@@ -444,40 +448,42 @@ declare module mp.game.graphics {
         porousPool_water_ped_drip,
         liquidTrail_water = 9050
     }
+
     enum markerTypes {
-        MarkerTypeUpsideDownCone = 0,
-        MarkerTypeVerticalCylinder = 1,
-        MarkerTypeThickChevronUp = 2,
-        MarkerTypeThinChevronUp = 3,
-        MarkerTypeCheckeredFlagRect = 4,
-        MarkerTypeCheckeredFlagCircle = 5,
-        MarkerTypeVerticleCircle = 6,
-        MarkerTypePlaneModel = 7,
-        MarkerTypeLostMCDark = 8,
-        MarkerTypeLostMCLight = 9,
-        MarkerTypeNumber0 = 10,
-        MarkerTypeNumber1 = 11,
-        MarkerTypeNumber2 = 12,
-        MarkerTypeNumber3 = 13,
-        MarkerTypeNumber4 = 14,
-        MarkerTypeNumber5 = 15,
-        MarkerTypeNumber6 = 16,
-        MarkerTypeNumber7 = 17,
-        MarkerTypeNumber8 = 18,
-        MarkerTypeNumber9 = 19,
-        MarkerTypeChevronUpx1 = 20,
-        MarkerTypeChevronUpx2 = 21,
-        MarkerTypeChevronUpx3 = 22,
-        MarkerTypeHorizontalCircleFat = 23,
-        MarkerTypeReplayIcon = 24,
-        MarkerTypeHorizontalCircleSkinny = 25,
-        MarkerTypeHorizontalCircleSkinny_Arrow = 26,
-        MarkerTypeHorizontalSplitArrowCircle = 27,
-        MarkerTypeDebugSphere = 28,
-        MarkerTypeDallorSign = 29,
-        MarkerTypeHorizontalBars = 30,
-        MarkerTypeWolfHead = 31
+        markerTypeUpsideDownCone = 0,
+        markerTypeVerticalCylinder = 1,
+        markerTypeThickChevronUp = 2,
+        markerTypeThinChevronUp = 3,
+        markerTypeCheckeredFlagRect = 4,
+        markerTypeCheckeredFlagCircle = 5,
+        markerTypeVerticleCircle = 6,
+        markerTypePlaneModel = 7,
+        markerTypeLostMCDark = 8,
+        markerTypeLostMCLight = 9,
+        markerTypeNumber0 = 10,
+        markerTypeNumber1 = 11,
+        markerTypeNumber2 = 12,
+        markerTypeNumber3 = 13,
+        markerTypeNumber4 = 14,
+        markerTypeNumber5 = 15,
+        markerTypeNumber6 = 16,
+        markerTypeNumber7 = 17,
+        markerTypeNumber8 = 18,
+        markerTypeNumber9 = 19,
+        markerTypeChevronUpx1 = 20,
+        markerTypeChevronUpx2 = 21,
+        markerTypeChevronUpx3 = 22,
+        markerTypeHorizontalCircleFat = 23,
+        markerTypeReplayIcon = 24,
+        markerTypeHorizontalCircleSkinny = 25,
+        markerTypeHorizontalCircleSkinny_Arrow = 26,
+        markerTypeHorizontalSplitArrowCircle = 27,
+        markerTypeDebugSphere = 28,
+        markerTypeDallorSign = 29,
+        markerTypeHorizontalBars = 30,
+        markerTypeWolfHead = 31
     }
+
     enum hudComponents {
         hud = 0,
         hudWantedStars = 1,

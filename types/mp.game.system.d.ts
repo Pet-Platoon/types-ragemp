@@ -15,13 +15,11 @@ declare module mp.game {
         static startNewScriptWithArgs(scriptName: string, args: object, argCount: number, stackSize: number): number;
         static toFloat(value: number): number;
         static settimera(value: number);
-        static startNewStreamedScriptWithArgs(scriptHash: string, args: object, argCount: number, stackSize: number): number;
-        static startNewStreamedScriptWithArgs(scriptHash: number, args: object, argCount: number, stackSize: number): number;
+        static startNewStreamedScriptWithArgs(scriptHash: string | number, args: object, argCount: number, stackSize: number): number;
         static cos(value: number): number;
         static pow(base: number, exponent: number): number;
         static startNewScript(scriptName: string, stackSize: number): number;
-        static startNewStreamedScript(scriptHash: string, stackSize: number): number;
-        static startNewStreamedScript(scriptHash: number, stackSize: number): number;
+        static startNewStreamedScript(scriptHash: string | number, stackSize: number): number;
         static shiftLeft(value: number, bitShift: number): number;
         static round(value: number): number;
         static floor(value: number): number;

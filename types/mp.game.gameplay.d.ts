@@ -132,7 +132,9 @@ declare module mp.game.gameplay {
         minimum: mp.Vector3;
         maximum: mp.Vector3;
     }
-/**    enum windowTitles {
+
+/*
+    enum windowTitles {
         CELL_EMAIL_BOD	=	'Enter your Eyefind message'
         CELL_EMAIL_BODE	=	'Message too long. Try again'
         CELL_EMAIL_BODF	=	'Forbidden message. Try again'
@@ -157,7 +159,9 @@ declare module mp.game.gameplay {
         FMMC_KEY_TIP9F	=	'Invalid Outfit Name. Try again'
         FMMC_KEY_TIP9N	=	'Outfit Name'
         PM_NAME_CHALL	=	'Enter Challenge Name'
-    }*/
+    }
+*/
+
     enum incidentTypes {
         fireDepartment = 3,
         paramedics = 5,
@@ -165,18 +169,19 @@ declare module mp.game.gameplay {
         pedsInCavalcades = 11,
         merryweather = 14
     }
+
     enum dispatchTypes {
-    policeAutomobile = 1,
-    policeHelicopter = 2,
-    swatHelicopter = 3,
-    fireDepartment = 4,
-    swatAutomobile = 5,
-    ambulanceDepartment = 6,
-    gangs = 7,
-    policeRiders = 8,
-    policeVehicleRequest = 9,
-    policeRoadBlock = 10,
-    policeBoat = 11,
-    armyVehicle = 12,
-}
+        policeAutomobile = 1,
+        policeHelicopter = 2,
+        swatHelicopter = 3,
+        fireDepartment = 4,
+        swatAutomobile = 5,
+        ambulanceDepartment = 6,
+        gangs = 7,
+        policeRiders = 8,
+        policeVehicleRequest = 9,
+        policeRoadBlock = 10,
+        policeBoat = 11,
+        armyVehicle = 12,
+    }
 }
