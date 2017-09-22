@@ -87,6 +87,35 @@ declare module mp.game {
         static getClosestVehicle(x: number, y: number, z: number, radius: number, modelHash: number | string, flags: number): mp.game.vehicle | object;
         static displayDistantVehicles(toggle: boolean);
         static switchTrainTrack(intersectionId: number, state: boolean): object;
+
+        gear: number;
+        steeringAngle: number;
+        rpm: number;
+
+        removeHighDetailModel();
+        setCreatesMoneyPickupsWhenExploded(toggle: boolean);
+        steerUnlockBias(toggle: boolean);
+        getTrainCarriage(cariage: number): mp.game.entity | object;
+        setRudderBroken(p0: boolean);
+        detachFromCargobob(cargobob: mp.game.vehicle | object);
+        getWindowTint(): number;
+        setFixed();
+        areAllWindowsIntact(): boolean;
+        doesExtraExist(extraId: number): boolean;
+        isInBurnout(): boolean;
+        isAttachedToTowTruck(vehicle: mp.game.vehicle | object): boolean;
+        setSearchlight(toggle: boolean, canBeUsedByAI: boolean);
+        setTrainCruiseSpeed(speed: number);
+        isCargobobHookActive(): boolean;
+        setFrictionOverride(friction: number);
+        getVehicleTrailer(vehicle: mp.game.vehicle): mp.game.vehicle;
+        getTrailer(vehicle: mp.game.vehicle): mp.game.vehicle;
+        isHighDetail(): boolean;
+        setModKit(modKit: number);
+        setExtraColours(pearlescentColor: number, wheelColor: number);
+        getPedUsingDoor(doorIndex: number): mp.game.ped | object;
+        resetWheels(toggle: boolean);
+        setReduceGrip(toggle: boolean);
     }
 }
 declare module mp.game.vehicle {
