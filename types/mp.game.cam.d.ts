@@ -79,8 +79,7 @@ declare module mp.game {
         getRot(p0: object): mp.Vector3;
         setDofFnumberOfLens(p1: number);
         setRot(rotX: number, rotY: number, rotZ: number, p3: number);
-        destroy();
-        destroy(destroy: boolean);
+        destroy(destroy?: boolean);
         setAffectsAiming(toggle: boolean);
         playAnim(animName: string, animDictionary: string, x: number, y: number, z: number, xRot: number, yRot: number, zRot: number, p8: object, p9: number);
         setActiveWithInterp(camFrom: mp.game.cam, duration: number, easeLocation: number, easeRotation: number);
@@ -107,7 +106,6 @@ declare module mp.game {
         stopPointing();
         pointAtCoord(x: number, y: number, z: number);
         attachTo(entity: mp.game.entity | object, xOffset: number, yOffset: number, zOffset: number, isRelative: boolean);
-        attachTo(entity: mp.game.entity | object, boneIndex: number, xPos: number, yPos: number, zPos: number, xRot: number, yRot: number, zRot: number, p8: boolean, useSoftPinning: boolean, collision: boolean, isPed: boolean, vertexIndex: number, fixedRot: boolean);
     }
 }
 
