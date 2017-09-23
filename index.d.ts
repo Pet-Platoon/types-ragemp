@@ -1,1 +1,1 @@
-/// <reference path="client.d.ts" />
+/// <reference path="server.d.ts" />
