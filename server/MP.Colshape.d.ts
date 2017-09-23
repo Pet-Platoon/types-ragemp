@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Colshape extends mp.Entity {
         shapeType: mp.ColshapeType;
 
@@ -8,11 +8,11 @@ namespace mp {
     }
 
     interface ColshapePool extends mp.Pool<mp.Colshape> {
-        newCircle(x: number, y: number, radius: number, dimension: number = 0): mp.Colshape;
-        newSphere(x: number, y: number, z: number, range: number, dimension: number = 0): mp.Colshape;
-        newTube(x: number, y: number, z: number, height: number, dimension: number = 0): mp.Colshape;
-        newRectangle(x: number, y: number, width: number, height: number, dimension: number = 0): mp.Colshape;
-        newCube(x: number, y: number, z: number, width: number, depth: number, height: number, dimension: number = 0): mp.Colshape;
+        newCircle(x: number, y: number, radius: number, dimension?: number): mp.Colshape;
+        newSphere(x: number, y: number, z: number, range: number, dimension?: number): mp.Colshape;
+        newTube(x: number, y: number, z: number, height: number, dimension?: number): mp.Colshape;
+        newRectangle(x: number, y: number, width: number, height: number, dimension?: number): mp.Colshape;
+        newCube(x: number, y: number, z: number, width: number, depth: number, height: number, dimension?: number): mp.Colshape;
     }
 
     enum ColshapeType {

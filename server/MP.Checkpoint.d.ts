@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Checkpoint extends mp.Entity {
         radius: number;
         colour: number;
@@ -17,6 +17,6 @@ namespace mp {
     }
 
     interface CheckpointPool extends mp.Pool<mp.Checkpoint> {
-        'new'(type: number, position: mp.Vector3, direction: mp.Vector3, radius: number, red: number, green: number, blue: number, alpha: number, visible: boolean = true, dimension: number = 0): mp.Checkpoint;
+        'new'(type: number, position: mp.Vector3, direction: mp.Vector3, radius: number, red: number, green: number, blue: number, alpha: number, visible?: boolean, dimension?: number): mp.Checkpoint;
     }
 }

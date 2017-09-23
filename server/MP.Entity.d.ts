@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Entity {
         readonly id: number;
         readonly type: mp.EntityType

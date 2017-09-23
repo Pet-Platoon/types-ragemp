@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Vehicle extends mp.Entity {
         rotation: mp.Vector3;
         velocity: mp.Vector3;
@@ -37,9 +37,9 @@ namespace mp {
     }
 
     interface VehiclePool extends mp.Pool<mp.Vehicle> {
-        'new'(model: number, position: mp.Vector3, heading: number = 0, dimension: number = 0): mp.Vehicle;
+        'new'(model: number, position: mp.Vector3, heading?: number, dimension?: number): mp.Vehicle;
     }
-    
+
     enum VehicleModType {
         spoilers = 0,
         frontBumper = 1,

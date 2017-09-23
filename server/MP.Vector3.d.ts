@@ -1,4 +1,4 @@
-namespace mp {
+declare namespace mp {
     interface Vector3 {
         x: number;
         y: number;

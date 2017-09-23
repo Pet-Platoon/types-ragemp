@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-interface ScriptContext {
+declare interface ScriptContext {
     versions: mp.Versions;
     config: mp.Config;
     environment: mp.Environment;

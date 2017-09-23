@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Player extends mp.Entity {
         readonly action: mp.PlayerActions;
         readonly isJumping: boolean;
@@ -65,8 +65,8 @@ namespace mp {
     }
 
     interface PlayerHeadBlend {
-        shape: number[3];
-        skin: number[3];
+        shape: number[];
+        skin: number[];
         shapeMix: number;
         skinMix: number;
         thirdMix: number;

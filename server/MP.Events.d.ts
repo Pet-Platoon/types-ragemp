@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Events {
         add(events: object): void;
         add(eventName: mp.EventNames | string, func: (...args: any[]) => void): void;

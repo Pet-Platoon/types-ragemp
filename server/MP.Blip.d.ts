@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Blip extends mp.Entity {
         radius: number;
         colour: number;
@@ -14,7 +14,7 @@ namespace mp {
     }
 
     interface BlipPool extends mp.Pool<mp.Blip> {
-        'new'(sprite: number, position: mp.Vector3, dimension: number = 0): mp.Blip;
-        newStreamed(sprite: number, position: mp.Vector3, streamRange: number, dimension: number = 0): mp.Blip;
+        'new'(sprite: number, position: mp.Vector3, dimension?: number): mp.Blip;
+        newStreamed(sprite: number, position: mp.Vector3, streamRange: number, dimension?: number): mp.Blip;
     }
 }

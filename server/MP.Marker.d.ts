@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Marker extends mp.Entity {
         scale: number;
         colour: number;
@@ -16,6 +16,6 @@ namespace mp {
     }
 
     interface MarkerPool extends mp.Pool<mp.Marker> {
-        'new'(model: number, position: mp.Vector3, rotation: mp.Vector3, direction: mp.Vector3, radius: number, red: number, green: number, blue: number, alpha: number, visible: boolean = true, dimension: number = 0): mp.Marker;
+        'new'(model: number, position: mp.Vector3, rotation: mp.Vector3, direction: mp.Vector3, radius: number, red: number, green: number, blue: number, alpha: number, visible?: boolean, dimension?: number): mp.Marker;
     }
 }

@@ -1,6 +1,6 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
+declare namespace mp {
     interface Pool<TEntity> {
         readonly length: number;
         readonly size: number;
