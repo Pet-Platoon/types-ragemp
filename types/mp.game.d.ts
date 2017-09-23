@@ -2,7 +2,7 @@
 
 declare module mp {
     class game {
-        joaat(input: string): number;
-        joaat(input: string[]): number[];
+        static joaat(input: string): number;
+        static joaat(input: string[]): number[];
     }
 }
