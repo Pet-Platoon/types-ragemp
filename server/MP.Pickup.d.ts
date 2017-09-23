@@ -1,11 +1,9 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
-    interface Pickup extends mp.Entity {
-        pickupHash: number;
-    }
+declare interface MpPickup extends MpEntity {
+    pickupHash: number;
+}
 
-    interface PickupPool extends mp.Pool<mp.Pickup> {
-        'new'(...args: any[]): mp.Pickup; // TODO: Missing documentation;
-    }
+declare interface MpPickupPool extends MpPool<MpPickup> {
+    'new'(...args: any[]): MpPickup; // TODO: Missing documentation;
 }

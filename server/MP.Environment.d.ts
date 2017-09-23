@@ -1,16 +1,14 @@
 /// <reference path="../server.d.ts" />
 
-declare namespace mp {
-    interface Environment {
-        weather: string;
-        time: mp.Time;
+declare interface MpEnvironment {
+    weather: string;
+    time: MpTime;
 
-        setWeatherTransition(newWeather: string): void;
-    }
+    setWeatherTransition(newWeather: string): void;
+}
 
-    interface Time {
-        hour: number;
-        minute: number;
-        second: number;
-    }
+declare interface MpTime {
+    hour: number;
+    minute: number;
+    second: number;
 }

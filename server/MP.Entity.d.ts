@@ -1,26 +1,24 @@
 /// <reference path="../server.d.ts" />
 
-declare namespace mp {
-    interface Entity {
-        readonly id: number;
-        readonly type: mp.EntityType
+declare interface MpEntity {
+    readonly id: number;
+    readonly type: MpEntityType
 
-        alpha: number;
-        dimension: number;
-        model: number;
-        position: mp.Vector3;
+    alpha: number;
+    dimension: number;
+    model: number;
+    position: MpVector3;
 
-        destroy(): void;
-    }
+    destroy(): void;
+}
 
-    enum EntityType {
-        player = 'player',
-        vehicle = 'vehicle',
-        object = 'object',
-        pickup = 'object',
-        blip = 'blip',
-        checkpoint = 'checkpoint',
-        marker = 'marker',
-        colshape = 'colshape'
-    }
+declare enum MpEntityType {
+    player = 'player',
+    vehicle = 'vehicle',
+    object = 'object',
+    pickup = 'object',
+    blip = 'blip',
+    checkpoint = 'checkpoint',
+    marker = 'marker',
+    colshape = 'colshape'
 }

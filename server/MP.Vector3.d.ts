@@ -1,9 +1,9 @@
-declare namespace mp {
-    interface Vector3 {
-        x: number;
-        y: number;
-        z: number;
+/// <reference path="../server.d.ts" />
 
-        constructor(x: number, y: number, z: number);
-    }
+declare interface MpVector3 {
+    x: number;
+    y: number;
+    z: number;
+
+    new(x: number, y: number, z: number): MpVector3;
 }

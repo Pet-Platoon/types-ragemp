@@ -1,11 +1,9 @@
 /// <reference path="../server.d.ts" />
 
-namespace mp {
-    interface Object extends mp.Entity {
-        rotation: mp.Vector3;
-    }
+declare interface MpObject extends MpEntity {
+    rotation: MpVector3;
+}
 
-    interface ObjectPool extends mp.Pool<mp.Object> {
-        'new'(model: number, position: mp.Vector3, rotation: mp.Vector3, dimension: number = 0): mp.Object;
-    }
+declare interface MpObjectPool extends MpPool<MpObject> {
+    'new'(model: number, position: MpVector3, rotation: MpVector3, dimension?: number): MpObject;
 }

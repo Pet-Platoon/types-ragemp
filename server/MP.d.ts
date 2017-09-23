@@ -1,19 +1,19 @@
 /// <reference path="../server.d.ts" />
 
 declare interface ScriptContext {
-    versions: mp.Versions;
-    config: mp.Config;
-    environment: mp.Environment;
-    events: mp.Events;
+    versions: MpVersions;
+    config: MpConfig;
+    environment: MpEnvironment;
+    events: MpEvents;
 
-    blips: mp.BlipPool;
-    checkpoints: mp.CheckpointPool;
-    colshapes: mp.ColshapePool;
-    markers: mp.MarkerPool;
-    objects: mp.ObjectPool;
-    pickups: mp.PickupPool;
-    players: mp.PlayerPool;
-    vehicles: mp.VehiclePool;
+    blips: MpBlipPool;
+    checkpoints: MpCheckpointPool;
+    colshapes: MpColshapePool;
+    markers: MpMarkerPool;
+    objects: MpObjectPool;
+    pickups: MpPickupPool;
+    players: MpPlayerPool;
+    vehicles: MpVehiclePool;
 
     joaat(value: string): number;
     joaat(value: string[]): number[];

@@ -1,22 +1,20 @@
 /// <reference path="../server.d.ts" />
 
-declare namespace mp {
-    interface Checkpoint extends mp.Entity {
-        radius: number;
-        colour: number;
-        destination: mp.Vector3;
-        visible: boolean;
+declare interface MpCheckpoint extends MpEntity {
+    radius: number;
+    colour: number;
+    destination: MpVector3;
+    visible: boolean;
 
-        showFor(player: mp.Player): void;
-        showFor(players: mp.Player[]): void;
-        hideFor(player: mp.Player): void;
-        hideFor(players: mp.Player[]): void;
+    showFor(player: MpPlayer): void;
+    showFor(players: MpPlayer[]): void;
+    hideFor(player: MpPlayer): void;
+    hideFor(players: MpPlayer[]): void;
 
-        getColour(): number[];
-        setColour(red: number, green: number, blue: number, alpha: number): void;
-    }
+    getColour(): number[];
+    setColour(red: number, green: number, blue: number, alpha: number): void;
+}
 
-    interface CheckpointPool extends mp.Pool<mp.Checkpoint> {
-        'new'(type: number, position: mp.Vector3, direction: mp.Vector3, radius: number, red: number, green: number, blue: number, alpha: number, visible?: boolean, dimension?: number): mp.Checkpoint;
-    }
+declare interface MpCheckpointPool extends MpPool<MpCheckpoint> {
+    'new'(type: number, position: MpVector3, direction: MpVector3, radius: number, red: number, green: number, blue: number, alpha: number, visible?: boolean, dimension?: number): MpCheckpoint;
 }
