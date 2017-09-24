@@ -1,0 +1,17 @@
+{
+  "name": "types-ragemp",
+  "description": "Typescript Definitions for RageMP",
+  "main": "index.js",
+  "authors": [
+    "tiaqoy0 muffin"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "ragemp",
+    "gta",
+    "gta5",
+    "rage",
+    "mp"
+  ],
+  "homepage": "https://github.com/Pet-Platoon/types-ragemp"
+}
