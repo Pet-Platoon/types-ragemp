@@ -1,7 +1,5 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp.game {
-    class unk {
-        static getBroadcastFinishedLosSound(p0: boolean);
-    }
+declare interface MpGameUnk {
+    getBroadcastFinishedLosSound(p0: boolean): void;
 }

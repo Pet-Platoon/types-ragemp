@@ -1,11 +1,9 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp {
-    class Vector3 {
-        x: number;
-        y: number;
-        z: number;
+declare interface MpVector3 {
+    x: number;
+    y: number;
+    z: number;
 
-        constructor(x: number, y: number, z: number);
-    }
+    'new'(x: number, y: number, z: number): MpVector3;
 }

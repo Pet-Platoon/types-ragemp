@@ -49,7 +49,14 @@ declare interface MpPlayer extends MpEntity {
 }
 
 declare interface MpPlayerPool extends MpPool<MpPlayer> {
-
+    broadcast(text: string): void;
+    broadcastInRange(position: MpVector3, range: number, text: string): void;
+    broadcastInRange(position: MpVector3, range: number, dimension: number, text: string): void;
+    broadcastInDimension(dimension: number, text: string): void;
+    call(eventName: string, ...args: any[]): void;
+    callInRange(position: MpVector3, range: number, eventName: string, ...args: any[]): void;
+    callInRange(position: MpVector3, range: number, dimension: number, eventName: string, ...args: any[]): void;
+    callInDimension(dimension: number, eventName: string, ...args: any[]): void;
 }
 
 declare interface MpPlayerCloth {

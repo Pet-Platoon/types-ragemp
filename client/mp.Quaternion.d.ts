@@ -1,12 +1,10 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp {
-    class Quaternion {
-        x: number;
-        y: number;
-        z: number;
-        w: number;
+declare interface MpQuaternion {
+    x: number;
+    y: number;
+    z: number;
+    w: number;
 
-        constructor(x: number, y: number, z: number, w: number);
-    }
+    'new'(x: number, y: number, z: number, w: number): MpQuaternion;
 }

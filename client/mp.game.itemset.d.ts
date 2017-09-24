@@ -1,15 +1,13 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp.game {
-    class itemset {
-        static removeFromItemset(p0: object, p1: object);
-        static isInItemset(p0: object, p1: object): boolean;
-        static createItemset(p0: boolean): object;
-        static cleanItemset(p0: object);
-        static getIndexedItemInItemset(p0: object, p1: object): object;
-        static isItemsetValid(p0: object): boolean;
-        static getItemsetSize(p0: object): object;
-        static destroyItemset(p0: object);
-        static addToItemset(p0: object, p1: object): boolean;
-    }
+declare interface MpGameItemset {
+    removeFromItemset(p0: object, p1: object): void;
+    isInItemset(p0: object, p1: object): boolean;
+    createItemset(p0: boolean): object;
+    cleanItemset(p0: object): void;
+    getIndexedItemInItemset(p0: object, p1: object): object;
+    isItemsetValid(p0: object): boolean;
+    getItemsetSize(p0: object): object;
+    destroyItemset(p0: object): void;
+    addToItemset(p0: object, p1: object): boolean;
 }

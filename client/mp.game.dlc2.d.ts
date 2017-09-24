@@ -1,8 +1,6 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp.game {
-    class dlc2 {
-        static nullify(variable: object, unused: object): boolean;
-        static isDlcPresent(dlcHash: string | number): boolean;
-    }
+declare interface MpGameDlc2 {
+    nullify(variable: object, unused: object): boolean;
+    isDlcPresent(dlcHash: string | number): boolean;
 }

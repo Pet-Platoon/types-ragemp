@@ -1,9 +1,7 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp.game {
-    class recorder {
-        static start(mode: any): any;
-        static stop(save: any): any;
-        static isRecording(): boolean;
-    }
+declare interface MpGameRecorder {
+    start(mode: any): any;
+    stop(save: any): any;
+    isRecording(): boolean;
 }

@@ -1,27 +1,25 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp.game {
-    class system {
-        static sin(value: number): number;
-        static ceil(value: number): number;
-        static vdist(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): number;
-        static wait(ms: number);
-        static settimerb(value: number);
-        static vmag(p0: number, p1: number, p2: number): number;
-        static sqrt(value: number): number;
-        static shiftRight(value: number, bitShift: number): number;
-        static vmag2(p0: number, p1: number, p2: number): number;
-        static vdist2(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): number;
-        static startNewScriptWithArgs(scriptName: string, args: object, argCount: number, stackSize: number): number;
-        static toFloat(value: number): number;
-        static settimera(value: number);
-        static startNewStreamedScriptWithArgs(scriptHash: string | number, args: object, argCount: number, stackSize: number): number;
-        static cos(value: number): number;
-        static pow(base: number, exponent: number): number;
-        static startNewScript(scriptName: string, stackSize: number): number;
-        static startNewStreamedScript(scriptHash: string | number, stackSize: number): number;
-        static shiftLeft(value: number, bitShift: number): number;
-        static round(value: number): number;
-        static floor(value: number): number;
-    }
+declare interface MpGameSystem {
+    sin(value: number): number;
+    ceil(value: number): number;
+    vdist(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): number;
+    wait(ms: number): void;
+    settimerb(value: number): void;
+    vmag(p0: number, p1: number, p2: number): number;
+    sqrt(value: number): number;
+    shiftRight(value: number, bitShift: number): number;
+    vmag2(p0: number, p1: number, p2: number): number;
+    vdist2(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): number;
+    startNewScriptWithArgs(scriptName: string, args: object, argCount: number, stackSize: number): number;
+    toFloat(value: number): number;
+    settimera(value: number): void;
+    startNewStreamedScriptWithArgs(scriptHash: string | number, args: object, argCount: number, stackSize: number): number;
+    cos(value: number): number;
+    pow(base: number, exponent: number): number;
+    startNewScript(scriptName: string, stackSize: number): number;
+    startNewStreamedScript(scriptHash: string | number, stackSize: number): number;
+    shiftLeft(value: number, bitShift: number): number;
+    round(value: number): number;
+    floor(value: number): number;
 }

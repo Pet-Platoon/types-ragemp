@@ -1,15 +1,15 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp {
-    class browser {
-        static 'new'(url: string);
+declare interface MpBrowser {
+    url: string;
+    active: boolean;
 
-        url: string;
-        active: boolean;
+    reload(ignoreCache: boolean): void;
+    execute(executedCode: string): void;
+    destroy(): void;
+    markAsChat(): void;
+}
 
-        reload(ignoreCache: boolean);
-        execute(executedCode: string);
-        destroy();
-        markAsChat();
-    }
+declare interface MpBrowserPool extends MpPool<MpBrowser> {
+    'new'(url: string): MpBrowser;
 }

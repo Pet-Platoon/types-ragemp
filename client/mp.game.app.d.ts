@@ -1,16 +1,14 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp.game {
-    class app {
-        static appDeleteAppData(appName: string): boolean;
-        static appGetFloat(property: string): number;
-        static appGetString(property: string): string;
-        static appGetInt(property: string): number;
-        static appHasSyncedData(property: string): boolean;
-        static appSetApp(appName: string);
-        static appSetBlock(blockName: string);
-        static appSetFloat(property: string, value: number);
-        static appSetInt(property: string, value: number);
-        static appSetString(property: string, value: string);
-    }
+declare interface MpGameApp {
+    appDeleteAppData(appName: string): boolean;
+    appGetFloat(property: string): number;
+    appGetString(property: string): string;
+    appGetInt(property: string): number;
+    appHasSyncedData(property: string): boolean;
+    appSetApp(appName: string): void;
+    appSetBlock(blockName: string): void;
+    appSetFloat(property: string, value: number): void;
+    appSetInt(property: string, value: number): void;
+    appSetString(property: string, value: string): void;
 }

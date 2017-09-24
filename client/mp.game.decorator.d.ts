@@ -1,17 +1,13 @@
-/// <reference path="../index.d.ts" />
+/// <reference path="../client.d.ts" />
 
-declare module mp.game {
-    class decorator {
-        static decorIsRegisteredAsType(propertyName: string, type: mp.game.decorator.decorType | number): boolean;
-        static decorRegister(propertyName: string, type: mp.game.decorator.decorType | number);
-    }
+declare interface MpGameDecorator {
+    decorIsRegisteredAsType(propertyName: string, type: MpGameDecoratorType | number): boolean;
+    decorRegister(propertyName: string, type: MpGameDecoratorType | number): void;
 }
 
-declare module mp.game.decorator {
-    enum decorType {
-        float = 1,
-        bool = 2,
-        int = 3,
-        time = 5
-    }
+declare enum MpGameDecoratorType {
+    float = 1,
+    bool = 2,
+    int = 3,
+    time = 5
 }
