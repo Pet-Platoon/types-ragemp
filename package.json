@@ -1,5 +1,5 @@
 {
-  "name": "types-ragemp-client",
+  "name": "types-ragemp",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/pet-platoon/types-ragemp-client.git"
+    "url": "git+https://gitlab.com/pet-platoon/types-ragemp.git"
   },
   "author": "pet-platoon",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://gitlab.com/pet-platoon/types-ragemp-client/issues"
+    "url": "https://gitlab.com/pet-platoon/types-ragemp/issues"
   },
-  "homepage": "https://gitlab.com/pet-platoon/types-ragemp-client#README"
+  "homepage": "https://gitlab.com/pet-platoon/types-ragemp#README"
 }
