@@ -1,19 +1,18 @@
 {
   "name": "types-ragemp",
-  "version": "0.0.1",
-  "description": "Serverside definitions",
-  "main": "",
+  "version": "0.0.2",
+  "description": "Serverside definitions for RageMP",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/pet-platoon/types-ragemp.git"
+    "url": "git+https://github.com/Pet-Platoon/types-ragemp.git"
   },
   "author": "pet-platoon",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://gitlab.com/pet-platoon/types-ragemp/issues"
+    "url": "https://github.com/Pet-Platoon/types-ragemp/issues"
   },
-  "homepage": "https://gitlab.com/pet-platoon/types-ragemp#README"
+  "homepage": "https://github.com/Pet-Platoon/types-ragemp#README"
 }
