@@ -1,8 +1,7 @@
 {
   "name": "types-ragemp",
   "version": "0.0.2",
-  "description": "Typescript Definitions for RageMP",
-  "main": "index.js",
+  "description": "Serverside definitions for RageMP",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
