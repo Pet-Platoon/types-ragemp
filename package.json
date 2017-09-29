@@ -1,6 +1,6 @@
 {
   "name": "types-ragemp",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Serverside definitions for RageMP",
   "main": "",
   "scripts": {
