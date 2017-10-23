@@ -11,7 +11,10 @@ declare interface MpCheckpoint extends MpEntity {
     hideFor(player: MpPlayer): void;
     hideFor(players: MpPlayer[]): void;
 
-    getColour(): number[];
+    getColour(): {
+        readonly intValue: number;
+        readonly rgba: number[];
+    };
     setColour(red: number, green: number, blue: number, alpha: number): void;
 }
 

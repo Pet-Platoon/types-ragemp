@@ -2,7 +2,7 @@
 
 declare interface MpEntity {
     readonly id: number;
-    readonly type: MpEntityType
+    readonly type: string
 
     alpha: number;
     dimension: number;
@@ -10,15 +10,4 @@ declare interface MpEntity {
     position: MpVector3;
 
     destroy(): void;
-}
-
-declare enum MpEntityType {
-    player = 'player',
-    vehicle = 'vehicle',
-    object = 'object',
-    pickup = 'object',
-    blip = 'blip',
-    checkpoint = 'checkpoint',
-    marker = 'marker',
-    colshape = 'colshape'
 }

@@ -1,7 +1,7 @@
 /// <reference path="../index.d.ts" />
 
 declare interface MpColshape extends MpEntity {
-    readonly shapeType: MpColshapeType;
+    readonly shapeType: string;
 
     isPointWithin(position: MpVector3): boolean;
 }
@@ -12,13 +12,4 @@ declare interface MpColshapePool extends MpPool<MpColshape> {
     newTube(x: number, y: number, z: number, height: number, dimension?: number): MpColshape;
     newRectangle(x: number, y: number, width: number, height: number, dimension?: number): MpColshape;
     newCube(x: number, y: number, z: number, width: number, depth: number, height: number, dimension?: number): MpColshape;
-}
-
-declare enum MpColshapeType {
-    sphere = 'sphere',
-    tube = 'tube',
-    circle = 'circle',
-    polygon = 'polygon',
-    cuboid = 'cuboid',
-    rectangle = 'rectangle'
 }
