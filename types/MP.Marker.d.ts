@@ -2,7 +2,6 @@
 
 declare interface MpMarker extends MpEntity {
     scale: number;
-    colour: number;
     direction: MpVector3;
     visible: boolean;
 
@@ -10,13 +9,10 @@ declare interface MpMarker extends MpEntity {
     showFor(players: MpPlayer[]): void;
     hideFor(player: MpPlayer): void;
     hideFor(players: MpPlayer[]): void;
-    getColour(): {
-        readonly intValue: number;
-        readonly rgba: number[];
-    };
+    getColour(): number[];
     setColour(red: number, green: number, blue: number, alpha: number): void;
 }
 
 declare interface MpMarkerPool extends MpPool<MpMarker> {
-    'new'(model: number, position: MpVector3, rotation: MpVector3, direction: MpVector3, radius: number, red: number, green: number, blue: number, alpha: number, visible?: boolean, dimension?: number): MpMarker;
+    'new'(type: number, position: MpVector3, rotation: MpVector3, direction: MpVector3, radius: number, red: number, green: number, blue: number, alpha: number, visible?: boolean, dimension?: number): MpMarker;
 }
