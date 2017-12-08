@@ -14,6 +14,7 @@ declare interface MpPlayer extends MpEntity {
     readonly aimTarget: any;
     readonly ping: number;
     readonly ip: string;
+    readonly streamedPlayers: MpPlayer[];
 
     name: string;
     heading: number;
@@ -25,8 +26,9 @@ declare interface MpPlayer extends MpEntity {
 
     kick(reason: string): void;
     ban(reason: string): void;
-    spawn(pos: MpVector3, heading?: number): void;
+    spawn(pos: MpVector3): void;
     giveWeapon(weaponHash: number | number[], ammo: number): void;
+    resetWeapon(...args: any[]): any; // TODO: Missing documentation
     outputChatBox(message: string): void;
     getClothes(componentNumber: number): {
         readonly drawable: number;
@@ -60,6 +62,7 @@ declare interface MpPlayer extends MpEntity {
     playAnimation(dictionary: string, name: string, speed: number, flag: number): void;
     playScenario(scenario: string): void;
     stopAnimation(): void;
+    isStreamedFor(...args: any[]): any; // TODO: Missing documentation
 }
 
 declare interface MpPlayerPool extends MpPool<MpPlayer> {
