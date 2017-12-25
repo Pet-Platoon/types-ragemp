@@ -12,6 +12,7 @@ declare interface MpVehicle extends MpEntity {
     readonly neonEnabled: boolean;
     readonly dead: boolean;
     readonly trailer: MpVehicle;
+    readonly movable: boolean;
 
     rotation: MpVector3;
     velocity: MpVector3;
@@ -25,20 +26,30 @@ declare interface MpVehicle extends MpEntity {
     getNeonColour(): number[];
     setMod(modType: number, modIndex: number, customTires?: boolean): void;
     getMod(modType: number): number;
-    setColour(primary: number, secondary: number): void;
-    setColourRGB(red1: number, green1: number, blue1: number, red2: number, green2: number, blue2: number): void;
+    setColor(primary: number, secondary: number): void;
+    setColorRGB(red1: number, green1: number, blue1: number, red2: number, green2: number, blue2: number): void;
     setPaint(primaryType: number, primaryColour: number, secondaryType: number, secondaryColour: number): void;
-    getColour(id: number): number;
-    getColourRGB(slot: number): number[];
+    getColor(id: number): number;
+    getColorRGB(slot: number): number[];
     getPaint(id: number): number;
     getOccupant(seat: number): MpPlayer;
     setOccupant(seat: number, player: MpPlayer): void;
     getOccupants(): MpPlayer[];
     explode(): void;
     spawn(position: MpVector3, heading: number): void; // TODO: Missing documentation
-    isStreamedFor(...args: any[]): any; // TODO: Missing documentation
+    isStreamedFor(object: MpPlayer): boolean;
 }
 
 declare interface MpVehiclePool extends MpPool<MpVehicle> {
-    'new'(model: number, position: MpVector3, dimension?: number): MpVehicle;
+    'new'(model: number, position: MpVector3, options?: MpVehicleOptions): MpVehicle;
+}
+
+declare interface MpVehicleOptions {
+    alpha: number;
+    color: [[number, number, number], [number, number, number]];
+    dimension: number;
+    engine: boolean;
+    heading: number;
+    locked: boolean;
+    numberPlate: string;
 }

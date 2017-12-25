@@ -3,7 +3,7 @@
 declare interface ScriptContext {
     versions: MpVersions;
     config: MpConfig;
-    environment: MpEnvironment;
+    world: MpWorld;
     events: MpEvents;
 
     blips: MpBlipPool;
@@ -14,6 +14,7 @@ declare interface ScriptContext {
     pickups: MpPickupPool;
     players: MpPlayerPool;
     vehicles: MpVehiclePool;
+    labels: MpTextLabelPool;
 
     joaat(value: string): number;
     joaat(value: string[]): number[];
