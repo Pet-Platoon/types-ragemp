@@ -14,5 +14,6 @@
 /// <reference path="types/MP.Vector3.d.ts" />
 /// <reference path="types/MP.Vehicle.d.ts" />
 /// <reference path="types/MP.Versions.d.ts" />
+/// <reference path="types/MP.TextLabel.d.ts" />
 
 declare const mp: ScriptContext;

@@ -15,6 +15,7 @@ declare interface MpPlayer extends MpEntity {
     readonly ping: number;
     readonly ip: string;
     readonly streamedPlayers: MpPlayer[];
+    readonly allWeapons: number[];
 
     name: string;
     heading: number;
@@ -62,7 +63,8 @@ declare interface MpPlayer extends MpEntity {
     playAnimation(dictionary: string, name: string, speed: number, flag: number): void;
     playScenario(scenario: string): void;
     stopAnimation(): void;
-    isStreamedFor(...args: any[]): any; // TODO: Missing documentation
+    isStreamedFor(object: MpPlayer): boolean;
+    removeObject(object: any): void; // TODO: Missing documentation
 }
 
 declare interface MpPlayerPool extends MpPool<MpPlayer> {

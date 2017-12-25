@@ -5,5 +5,11 @@ declare interface MpObject extends MpEntity {
 }
 
 declare interface MpObjectPool extends MpPool<MpObject> {
-    'new'(model: number, position: MpVector3, rotation: MpVector3, dimension?: number): MpObject;
+    'new'(model: number, position: MpVector3, options?: MpObjectOptions): MpObject;
+}
+
+declare interface MpObjectOptions {
+    alpha: number;
+    dimension: number;
+    rotation: MpVector3;
 }
