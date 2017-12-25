@@ -15,12 +15,7 @@ declare interface MpCheckpoint extends MpEntity {
 }
 
 declare interface MpCheckpointPool extends MpPool<MpCheckpoint> {
-    'new'(
-        type: number, 
-        position: MpVector3, 
-        radius: number, 
-        options?: MpCheckpointOptions,
-    ): MpCheckpoint;
+    'new'(type: number, position: MpVector3, radius: number, options?: MpCheckpointOptions): MpCheckpoint;
 }
 
 declare interface MpCheckpointOptions {

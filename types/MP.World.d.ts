@@ -5,7 +5,7 @@ declare interface MpWorld {
     time: MpTime;
     trafficLights: {
         locked: boolean,
-        state: number;
+        state: number,
     };
 
     setWeatherTransition(newWeather: string): void;
