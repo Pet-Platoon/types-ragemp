@@ -4,7 +4,7 @@
 /// <reference path="types/MP.Colshape.d.ts" />
 /// <reference path="types/MP.Config.d.ts" />
 /// <reference path="types/MP.Entity.d.ts" />
-/// <reference path="types/MP.Environment.d.ts" />
+/// <reference path="types/MP.World.d.ts" />
 /// <reference path="types/MP.Events.d.ts" />
 /// <reference path="types/MP.Marker.d.ts" />
 /// <reference path="types/MP.Object.d.ts" />
@@ -14,5 +14,6 @@
 /// <reference path="types/MP.Vector3.d.ts" />
 /// <reference path="types/MP.Vehicle.d.ts" />
 /// <reference path="types/MP.Versions.d.ts" />
+/// <reference path="types/MP.TextLabel.d.ts" />
 
 declare const mp: ScriptContext;
